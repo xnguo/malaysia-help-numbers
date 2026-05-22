@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Malaysia Help Numbers · Nombor Bantuan Malaysia · 马来西亚求助电话</title>
+<meta name="description" content="A community-compiled quick reference of Malaysia's emergency lines, agency hotlines, and public help services. Free download in English, Bahasa Melayu, and 中文.">
+<style>
+  :root {
+    --ink:        #1a1a1a;
+    --ink-soft:   #3a3a3a;
+    --ink-mid:    #555;
+    --ink-muted:  #6a6a6a;
+    --rule:       #d8d8d8;
+    --page:       #fafaf7;
+    --card:       #ffffff;
+    --accent:     #B71C1C;   /* red — matches PDF tier-1 + footer watermark */
+    --link:       #0B4F87;   /* deep blue — matches PDF link colour */
+    --warn-bg:    #FFF8EC;
+    --warn-edge:  #B26A00;
+    --warn-text:  #3a3a3a;
+    --tier1:      #B71C1C;
+    --tier2:      #E65100;
+    --tier3:      #1565C0;
+    --tier4:      #2E7D32;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { font-size: 17px; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+    color: var(--ink);
+    background: var(--page);
+    line-height: 1.6;
+    padding: 0;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  /* top accent bar — full width */
+  .top-bar {
+    height: 6px;
+    background: var(--accent);
+  }
+
+  main {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 2.5rem 1.5rem 4rem;
+  }
+
+  /* HEADER — multilingual */
+  header {
+    margin-bottom: 2.5rem;
+  }
+  header .title-stack {
+    margin-bottom: 1.5rem;
+  }
+  header h1 {
+    font-size: clamp(2rem, 6vw, 2.75rem);
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.015em;
+    color: var(--ink);
+    margin-bottom: 0.25rem;
+  }
+  header .title-bm,
+  header .title-cn {
+    font-size: clamp(1.25rem, 3.5vw, 1.5rem);
+    font-weight: 600;
+    color: var(--ink-soft);
+    line-height: 1.2;
+    margin-bottom: 0.15rem;
+  }
+
+  header .tagline-stack {
+    margin-bottom: 1.25rem;
+    padding-left: 0.9rem;
+    border-left: 3px solid var(--rule);
+  }
+  header .tagline-en {
+    font-size: 1.15rem;
+    color: var(--ink-soft);
+    margin-bottom: 0.4rem;
+    line-height: 1.45;
+  }
+  header .tagline-bm,
+  header .tagline-cn {
+    font-size: 1rem;
+    color: var(--ink-mid);
+    line-height: 1.45;
+    margin-bottom: 0.3rem;
+  }
+
+  header .meta {
+    font-size: 0.95rem;
+    color: var(--ink-mid);
+  }
+  header .meta b {
+    color: var(--accent);
+    font-weight: 700;
+  }
+
+  /* DISCLAIMER — with critical-call-999 translated */
+  .callout {
+    background: var(--warn-bg);
+    border: 1.5px solid var(--warn-edge);
+    border-radius: 6px;
+    padding: 1.1rem 1.3rem;
+    margin-bottom: 2.5rem;
+    font-size: 1rem;
+    color: var(--warn-text);
+    line-height: 1.55;
+  }
+  .callout p { margin-bottom: 0.7rem; }
+  .callout p:last-child { margin-bottom: 0; }
+  .callout strong { color: var(--ink); }
+  .callout .alert {
+    color: var(--accent);
+    font-weight: 700;
+  }
+  .callout .alert-translations {
+    margin-top: 0.75rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid rgba(178, 106, 0, 0.3);
+    font-size: 0.95rem;
+    color: var(--ink-mid);
+    line-height: 1.5;
+  }
+  .callout .alert-translations .alert-line {
+    display: block;
+    margin-bottom: 0.2rem;
+  }
+  .callout .alert-translations .alert-line .alert {
+    font-weight: 700;
+  }
+
+  /* DOWNLOADS — confident buttons */
+  .downloads {
+    margin-bottom: 3rem;
+  }
+  .downloads-label {
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--ink-muted);
+    font-weight: 700;
+    margin-bottom: 1rem;
+    padding-bottom: 0.45rem;
+    border-bottom: 1px solid var(--rule);
+  }
+  .downloads-label .label-bm,
+  .downloads-label .label-cn {
+    text-transform: none;
+    letter-spacing: 0;
+    font-weight: 500;
+    color: var(--ink-muted);
+    margin-left: 0.5rem;
+    font-size: 0.85rem;
+  }
+
+  .download {
+    display: flex;
+    align-items: stretch;
+    gap: 0;
+    padding: 0;
+    background: var(--card);
+    border: 1.5px solid var(--rule);
+    border-radius: 6px;
+    text-decoration: none;
+    color: var(--ink);
+    margin-bottom: 0.7rem;
+    overflow: hidden;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
+  }
+  .download:hover {
+    border-color: var(--link);
+    box-shadow: 0 2px 6px rgba(11, 79, 135, 0.08);
+  }
+
+  .download.primary {
+    border-color: var(--accent);
+    border-width: 2px;
+    background: linear-gradient(to right, #fff 0%, #fff 88%, #fff5f5 100%);
+  }
+  .download.primary:hover {
+    box-shadow: 0 3px 8px rgba(183, 28, 28, 0.15);
+  }
+
+  .download .marker {
+    width: 6px;
+    flex-shrink: 0;
+  }
+  .download .marker-trilingual { background: var(--accent); }
+  .download .marker-en { background: #5B7FA8; }
+  .download .marker-bm { background: #5B8B5B; }
+  .download .marker-cn { background: #A86B5B; }
+
+  .download .content {
+    flex: 1;
+    padding: 1.15rem 1.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    min-width: 0;
+  }
+
+  .download .label {
+    flex: 1;
+    min-width: 0;
+  }
+  .download .name {
+    font-weight: 700;
+    font-size: 1.15rem;
+    display: block;
+    margin-bottom: 0.2rem;
+    color: var(--ink);
+  }
+  .download .desc {
+    font-size: 0.92rem;
+    color: var(--ink-mid);
+    line-height: 1.4;
+  }
+  .download.primary .name {
+    color: var(--accent);
+  }
+  .download.primary .recommended-badge {
+    display: inline-block;
+    background: var(--accent);
+    color: white;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    padding: 0.12rem 0.45rem;
+    border-radius: 3px;
+    margin-left: 0.5rem;
+    text-transform: uppercase;
+    vertical-align: 2px;
+  }
+
+  .download .meta {
+    font-size: 0.88rem;
+    color: var(--ink-mid);
+    white-space: nowrap;
+    text-align: right;
+    flex-shrink: 0;
+    line-height: 1.3;
+  }
+  .download .meta .pages {
+    display: block;
+    font-weight: 600;
+    color: var(--ink-soft);
+  }
+  .download .arrow {
+    color: var(--ink-muted);
+    font-size: 1.25rem;
+    margin-left: 0.5rem;
+    flex-shrink: 0;
+  }
+  .download.primary .arrow { color: var(--accent); }
+  .download:hover .arrow { transform: translateX(2px); transition: transform 0.15s; }
+
+  /* SECTIONS */
+  section {
+    margin-bottom: 2.5rem;
+  }
+  section h2 {
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--ink-muted);
+    font-weight: 700;
+    margin-bottom: 1rem;
+    padding-bottom: 0.45rem;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  section p {
+    font-size: 1rem;
+    color: var(--ink-soft);
+    margin-bottom: 0.85rem;
+    line-height: 1.6;
+  }
+  section ul {
+    list-style: none;
+    margin-bottom: 0.85rem;
+  }
+  section li {
+    font-size: 1rem;
+    color: var(--ink-soft);
+    padding-left: 1.4rem;
+    position: relative;
+    margin-bottom: 0.55rem;
+    line-height: 1.55;
+  }
+  section li::before {
+    content: "■";
+    position: absolute;
+    left: 0;
+    top: 0.05rem;
+    font-size: 0.55rem;
+    color: var(--ink-muted);
+  }
+
+  /* TIER list — small coloured markers matching PDF tier band colours */
+  .tier-list li::before { content: ""; width: 8px; height: 8px; top: 0.55rem; left: 0; border-radius: 1px; }
+  .tier-list li.t1::before { background: var(--tier1); }
+  .tier-list li.t2::before { background: var(--tier2); }
+  .tier-list li.t3::before { background: var(--tier3); }
+  .tier-list li.t4::before { background: var(--tier4); }
+  .tier-list li.tv::before { background: #6A1B9A; }
+  .tier-list li strong { color: var(--ink); font-weight: 700; }
+
+  /* verification box */
+  .verify {
+    background: #f0ede8;
+    border-left: 4px solid var(--ink-muted);
+    padding: 1rem 1.2rem;
+    margin-bottom: 2.5rem;
+    font-size: 0.97rem;
+    color: var(--ink-soft);
+    line-height: 1.55;
+    border-radius: 0 4px 4px 0;
+  }
+  .verify strong { color: var(--ink); }
+  .verify .canonical {
+    color: var(--accent);
+    font-weight: 700;
+  }
+  .verify code {
+    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    font-size: 0.92em;
+    background: rgba(0,0,0,0.07);
+    padding: 0.1rem 0.4rem;
+    border-radius: 3px;
+    color: var(--ink);
+  }
+
+  a { color: var(--link); text-decoration: underline; text-underline-offset: 2px; font-weight: 500; }
+  a:hover { text-decoration: none; }
+
+  /* footer */
+  footer {
+    margin-top: 3.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--rule);
+    font-size: 0.92rem;
+    color: var(--ink-mid);
+    line-height: 1.6;
+  }
+  footer .canonical {
+    color: var(--accent);
+    font-weight: 700;
+  }
+  footer p { margin-bottom: 0.5rem; }
+  footer a { color: var(--ink-mid); font-weight: 400; }
+
+  @media (max-width: 540px) {
+    main { padding: 1.75rem 1.1rem 3rem; }
+    .download .content {
+      flex-wrap: wrap;
+      padding: 1rem 1.1rem;
+    }
+    .download .meta {
+      text-align: left;
+      width: 100%;
+      margin-top: 0.4rem;
+    }
+    .download .arrow { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<div class="top-bar"></div>
+
+<main>
+
+  <header>
+    <div class="title-stack">
+      <h1>Malaysia Help Numbers</h1>
+      <div class="title-bm">Nombor Bantuan Malaysia</div>
+      <div class="title-cn">马来西亚求助电话</div>
+    </div>
+    <div class="tagline-stack">
+      <p class="tagline-en">A quick reference of emergency lines, agency hotlines, and where to go for help — organised by urgency.</p>
+      <p class="tagline-bm">Rujukan pantas talian kecemasan, talian agensi, dan ke mana untuk mendapatkan bantuan — disusun mengikut tahap kecemasan.</p>
+      <p class="tagline-cn">紧急电话、机构热线、求助渠道的快速参考——按紧急程度分类。</p>
+    </div>
+    <p class="meta"><b>Original v1.8</b> · Issued 22 May 2026</p>
+  </header>
+
+  <div class="callout">
+    <p><strong>Before you rely on this:</strong> Community-compiled reference, not an official publication of any agency. Numbers were correct on each agency's own website at the date of issue, but agencies change details without warning. For numbers you actually rely on, save them directly to your phone from the agency's own website.</p>
+    <p><span class="alert">If a number doesn't connect in a real emergency, call 999</span> — operators will route you to the right service.</p>
+    <div class="alert-translations">
+      <span class="alert-line"><span class="alert">Jika nombor tidak dapat disambungkan dalam kecemasan, hubungi 999</span> — operator akan menyambungkan anda ke perkhidmatan yang betul.</span>
+      <span class="alert-line"><span class="alert">如果在真正紧急情况下号码拨不通，请拨999</span>——接线员会为您转接到正确的服务。</span>
+    </div>
+  </div>
+
+  <div class="downloads">
+    <div class="downloads-label">
+      Download
+      <span class="label-bm">· Muat turun</span>
+      <span class="label-cn">· 下载</span>
+    </div>
+
+    <a class="download primary" href="pdfs/malaysia-help-numbers-EN-BM-CN-v1.8.pdf">
+      <span class="marker marker-trilingual"></span>
+      <span class="content">
+        <span class="label">
+          <span class="name">Trilingual edition<span class="recommended-badge">Recommended</span></span>
+          <span class="desc">English · Bahasa Melayu · 中文 — all three languages in one file, switch language at the top of every page</span>
+        </span>
+        <span class="meta">
+          <span class="pages">25 pages</span>
+          780 KB
+        </span>
+        <span class="arrow">→</span>
+      </span>
+    </a>
+
+    <a class="download" href="pdfs/malaysia-help-numbers-EN-v1.8.pdf">
+      <span class="marker marker-en"></span>
+      <span class="content">
+        <span class="label">
+          <span class="name">English only</span>
+          <span class="desc">Smaller file if you only need English</span>
+        </span>
+        <span class="meta">
+          <span class="pages">8 pages</span>
+          74 KB
+        </span>
+        <span class="arrow">→</span>
+      </span>
+    </a>
+
+    <a class="download" href="pdfs/malaysia-help-numbers-BM-v1.8.pdf">
+      <span class="marker marker-bm"></span>
+      <span class="content">
+        <span class="label">
+          <span class="name">Bahasa Melayu sahaja</span>
+          <span class="desc">Fail lebih kecil jika anda hanya perlukan satu bahasa</span>
+        </span>
+        <span class="meta">
+          <span class="pages">9 pages</span>
+          75 KB
+        </span>
+        <span class="arrow">→</span>
+      </span>
+    </a>
+
+    <a class="download" href="pdfs/malaysia-help-numbers-CN-v1.8.pdf">
+      <span class="marker marker-cn"></span>
+      <span class="content">
+        <span class="label">
+          <span class="name">中文（简体）</span>
+          <span class="desc">如果您只需要一种语言，文件较小</span>
+        </span>
+        <span class="meta">
+          <span class="pages">8 pages</span>
+          259 KB
+        </span>
+        <span class="arrow">→</span>
+      </span>
+    </a>
+
+  </div>
+
+  <section>
+    <h2>What's in it</h2>
+    <p>Four tiers of contacts, each with what to expect when you call, what to have ready, and any catch:</p>
+    <ul class="tier-list">
+      <li class="t1"><strong>Life-threatening</strong> — 999, 112, cardiac (IJN), hospital A&amp;E direct lines, active bank fraud</li>
+      <li class="t2"><strong>Urgent</strong> — poison, snakebite, gas leak, mental health crisis, domestic violence, missing child, highway breakdown, cyber incident</li>
+      <li class="t3"><strong>Important (office hours)</strong> — banking disputes, consumer complaints, employment issues, drug treatment, blood donation</li>
+      <li class="t4"><strong>Public services &amp; complaints</strong> — traffic, corruption, education, tax, environment, animal welfare, human rights</li>
+      <li class="tv"><strong>Visitor section</strong> — tourist police, lost passport, OSCC sexual assault response, English-language mental health support</li>
+    </ul>
+    <p>Every number is tagged with cost (free / local-rate / normal-rate / SMS-rate) and is tap-to-call on a phone.</p>
+  </section>
+
+  <div class="verify">
+    <strong>How to verify this is the real version:</strong> The canonical version of this document lives at <code>xnguo.github.io/malaysia-help-numbers</code>. The PDF footer shows <span class="canonical">Original v1.8</span> in red. Copies missing or with altered footer may have been edited.
+  </div>
+
+  <section>
+    <h2>What it is, what it isn't</h2>
+    <ul>
+      <li>Compiled with AI assistance from public agency sources (each agency's own website)</li>
+      <li>Every number verified against the agency's own site at the date of issue</li>
+      <li>Not an official publication of any agency</li>
+      <li>Not affiliated with the Government of Malaysia or any listed organisation</li>
+      <li>No guarantee of accuracy or fitness for purpose — verify against the agency's own site before relying on any specific detail</li>
+      <li>Hotlines change — if a number doesn't connect in a real emergency, call 999 and the operators will route you</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Reporting errors</h2>
+    <p>If you spot an outdated number or other error, please <a href="https://github.com/xnguo/malaysia-help-numbers/issues">open an issue on GitHub</a> with which file, which page, and what's wrong. Confirmed errors will be fixed in the next version.</p>
+  </section>
+
+  <footer>
+    <p><span class="canonical">Original v1.8</span> · Issued 22 May 2026 · Canonical version: <a href="https://xnguo.github.io/malaysia-help-numbers/">xnguo.github.io/malaysia-help-numbers</a></p>
+    <p>Free to share unmodified, with attribution. Licensed under <a href="https://creativecommons.org/licenses/by-nd/4.0/">CC BY-ND 4.0</a>. <a href="https://github.com/xnguo/malaysia-help-numbers">Source on GitHub</a>.</p>
+  </footer>
+
+</main>
+
+</body>
+</html>
